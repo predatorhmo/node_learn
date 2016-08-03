@@ -1,13 +1,14 @@
 //exports
 //global
-var db = require("../db")
+var db = require("../db");
+var log = require("../logger")(module);
 
 function User(name){
 	this.name = name;
 }
 
 User.prototype.hello = function(who){
-	console.log(who.name + ", " + db.getPhrase("Hello"));
+	log(who.name + ", " + db.getPhrase("Hello"));
 }
 
 //console.log(module);
